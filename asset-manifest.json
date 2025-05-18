@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/take-the-leap/static/css/main.a6060a1f.css",
+    "main.js": "/take-the-leap/static/js/main.6e8c6109.js",
+    "static/js/453.b8af7a8e.chunk.js": "/take-the-leap/static/js/453.b8af7a8e.chunk.js",
+    "index.html": "/take-the-leap/index.html",
+    "main.a6060a1f.css.map": "/take-the-leap/static/css/main.a6060a1f.css.map",
+    "main.6e8c6109.js.map": "/take-the-leap/static/js/main.6e8c6109.js.map",
+    "453.b8af7a8e.chunk.js.map": "/take-the-leap/static/js/453.b8af7a8e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6060a1f.css",
+    "static/js/main.6e8c6109.js"
+  ]
+}
