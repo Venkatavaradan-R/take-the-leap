@@ -1,0 +1,197 @@
+.about {
+  padding: 6rem 2rem;
+  background-color: white;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  text-align: center;
+  color: #34495e;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Experience Section */
+.experience-section {
+  margin-bottom: 3rem;
+}
+
+.experience-section h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.experience-card {
+  background: #f7f9fc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.experience-header h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-meta {
+  display: flex;
+  gap: 1rem;
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.experience-highlights {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience-highlights li {
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-highlights li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+/* Qualifications Section */
+.qualifications-section h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.qualifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.qualification-card {
+  background: #f7f9fc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.qualification-card h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.qualification-card .institution {
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.qualification-card .year {
+  color: #34495e;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Sidebar Cards */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.expertise-card,
+.languages-card,
+.ib-roles-card {
+  background: #f7f9fc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.expertise-card h3,
+.languages-card h3,
+.ib-roles-card h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+}
+
+.expertise-card ul,
+.languages-card ul,
+.ib-roles-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.expertise-card li,
+.languages-card li,
+.ib-roles-card li {
+  color: #34495e;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.expertise-card li:before,
+.languages-card li:before,
+.ib-roles-card li:before {
+  content: "•";
+  color: #3498db;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-sidebar {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1rem;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .qualifications-grid {
+    grid-template-columns: 1fr;
+  }
+} 

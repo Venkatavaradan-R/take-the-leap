@@ -1,0 +1,139 @@
+.programs {
+  padding: 6rem 2rem;
+  background-color: #f5f8fc;
+}
+
+.programs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.programs h2 {
+  text-align: center;
+  color: #1a4b84;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.programs-subtitle {
+  text-align: center;
+  color: #4a6fa5;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(26, 75, 132, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border: 1px solid #e8f1f8;
+}
+
+.program-card.recommended {
+  border: 2px solid #1a4b84;
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: #1a4b84;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.program-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.program-header h3 {
+  color: #1a4b84;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.program-description {
+  color: #4a6fa5;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.program-features {
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  margin-bottom: 1.5rem;
+}
+
+.feature-item h4 {
+  color: #1a4b84;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-item p {
+  color: #4a6fa5;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.program-pricing {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8f1f8;
+}
+
+.price {
+  margin-bottom: 1.5rem;
+}
+
+.amount {
+  color: #1a4b84;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.duration {
+  color: #4a6fa5;
+  font-size: 1rem;
+}
+
+.programs-note {
+  text-align: center;
+  color: #4a6fa5;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.programs-note p {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .programs {
+    padding: 4rem 1rem;
+  }
+
+  .programs h2 {
+    font-size: 2rem;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+} 
