@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/take-the-leap/static/css/main.0e39b29e.css",
-    "main.js": "/take-the-leap/static/js/main.bb4701f1.js",
-    "static/js/453.b8af7a8e.chunk.js": "/take-the-leap/static/js/453.b8af7a8e.chunk.js",
-    "index.html": "/take-the-leap/index.html",
-    "main.0e39b29e.css.map": "/take-the-leap/static/css/main.0e39b29e.css.map",
-    "main.bb4701f1.js.map": "/take-the-leap/static/js/main.bb4701f1.js.map",
-    "453.b8af7a8e.chunk.js.map": "/take-the-leap/static/js/453.b8af7a8e.chunk.js.map"
+    "main.css": "/static/css/main.0e39b29e.css",
+    "main.js": "/static/js/main.70cc759e.js",
+    "static/js/453.b8af7a8e.chunk.js": "/static/js/453.b8af7a8e.chunk.js",
+    "index.html": "/index.html",
+    "main.0e39b29e.css.map": "/static/css/main.0e39b29e.css.map",
+    "main.70cc759e.js.map": "/static/js/main.70cc759e.js.map",
+    "453.b8af7a8e.chunk.js.map": "/static/js/453.b8af7a8e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0e39b29e.css",
-    "static/js/main.bb4701f1.js"
+    "static/js/main.70cc759e.js"
   ]
 }
