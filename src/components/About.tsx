@@ -80,11 +80,6 @@ const About: React.FC = () => {
                 <div key={index} className="experience-card">
                   <div className="experience-header">
                     <h4>{exp.role}</h4>
-                    <div className="experience-meta">
-                      <span className="institution">{exp.institution}</span>
-                      <span className="period">{exp.period}</span>
-                      <span className="location">{exp.location}</span>
-                    </div>
                   </div>
                   <ul className="experience-highlights">
                     {exp.highlights.map((highlight, idx) => (
@@ -121,23 +116,13 @@ const About: React.FC = () => {
               </ul>
             </div>
 
-            <div className="languages-card">
-              <h3>Languages</h3>
-              <ul>
-                <li>French (Fluent)</li>
-                <li>English (Fluent)</li>
-                <li>Hindi (Fluent)</li>
-                <li>Tamil (Native)</li>
-              </ul>
-            </div>
-
             <div className="ib-roles-card">
               <h3>IB Examiner Roles</h3>
               <ul>
-                <li>Assistant Examiner, TOK essay and presentation moderator (2015-2021)</li>
-                <li>Team Leader / Senior Examiner, French B SL Paper 2 (2014-2021)</li>
-                <li>IA Moderator, French B SL Oral (2021-Present)</li>
-                <li>Assistant Examiner, French B SL Listening (2022-Present)</li>
+                <li>Assistant Examiner, TOK essay and presentation moderator</li>
+                <li>Team Leader / Senior Examiner, French B SL Writing</li>
+                <li>IA Moderator, French B SL Individual Oral</li>
+                <li>Assistant Examiner, French B SL Listening</li>
               </ul>
             </div>
           </div>

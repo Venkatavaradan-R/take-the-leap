@@ -1,6 +1,18 @@
 .about {
   padding: 6rem 2rem;
-  background-color: white;
+  background: linear-gradient(135deg, #f8fbff 0%, #e8f4fd 50%, #f0f8ff 100%);
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.02) 0%, rgba(155, 89, 182, 0.02) 100%);
+  pointer-events: none;
 }
 
 .about-container {

@@ -46,7 +46,7 @@ const programs: Program[] = [
   {
     type: "group",
     title: "Small Group French Classes",
-    description: "Interactive group sessions for collaborative learning with 3-5 students at similar proficiency levels",
+    description: "Interactive group sessions for collaborative learning with 4-6 students at similar proficiency levels",
     features: [
       {
         title: "Peer Learning",
@@ -89,6 +89,10 @@ const programs: Program[] = [
       {
         title: "Mock Examinations",
         description: "Regular full-length practice tests with detailed feedback"
+      },
+      {
+        title: "Mock Oral Recordings",
+        description: "Full length/ partial individual oral recordings with detailed feedback"
       }
     ],
     price: "₹2,000",
@@ -98,6 +102,13 @@ const programs: Program[] = [
 ];
 
 const Programs: React.FC = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="programs" className="programs">
       <div className="programs-container">
@@ -122,12 +133,8 @@ const Programs: React.FC = () => {
                 ))}
               </div>
 
-              <div className="program-pricing">
-                <div className="price">
-                  <span className="amount">{program.price}</span>
-                  <span className="duration">/{program.duration}</span>
-                </div>
-                <button className="cta-button">Enroll Now</button>
+              <div className="program-cta">
+                <button className="cta-button" onClick={scrollToContact}>Enroll Now</button>
               </div>
             </div>
           ))}
@@ -135,7 +142,7 @@ const Programs: React.FC = () => {
 
         <div className="programs-note">
           <p>* All programs include access to specially curated French learning materials and resources</p>
-          <p>* Custom packages available for long-term commitments</p>
+          <p>* Trial sessions available for all programs</p>
         </div>
       </div>
     </section>

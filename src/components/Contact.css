@@ -1,11 +1,25 @@
 .contact {
   padding: 6rem 2rem;
-  background-color: #f5f7fa;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  position: relative;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(245, 247, 250, 0.9) 0%, rgba(248, 251, 255, 0.95) 100%);
+  pointer-events: none;
 }
 
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .contact h2 {
@@ -32,32 +46,62 @@
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .info-card,
 .availability-card {
   background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e1e8ed;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8f4fd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover,
+.availability-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
 
 .info-card h3,
 .availability-card h3 {
   color: #2c3e50;
-  font-size: 1.3rem;
-  margin-bottom: 1.5rem;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.info-card h3::after,
+.availability-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #2980b9);
+  border-radius: 2px;
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f8fbff;
+  border-left: 4px solid #3498db;
+  transition: background-color 0.3s ease;
+}
+
+.info-item:hover {
+  background: #f0f8ff;
 }
 
 .info-item:last-child {
@@ -65,41 +109,190 @@
 }
 
 .info-item .icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  min-width: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-item div {
+  flex: 1;
 }
 
 .info-item h4 {
   color: #2c3e50;
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
 }
 
 .info-item p {
   color: #34495e;
-  font-size: 0.95rem;
-  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 500;
+}
+
+.availability-card {
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
 }
 
 .availability-card ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .availability-card li {
   color: #34495e;
-  margin-bottom: 0.8rem;
-  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #27ae60;
   position: relative;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.availability-card li:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.availability-card li:last-child {
+  margin-bottom: 0;
 }
 
 .availability-card li:before {
-  content: "•";
-  color: #3498db;
+  content: "✓";
+  color: #27ae60;
   position: absolute;
-  left: 0;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(39, 174, 96, 0.3);
 }
 
 /* Form Styles */
+.contact-form-container {
+  display: flex;
+  align-items: stretch;
+}
+
+.coming-soon-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8f4fd;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.coming-soon-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.coming-soon-card h3 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-title {
+  color: #3498db;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coming-soon-description {
+  color: #34495e;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #3498db;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-method:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.method-icon {
+  font-size: 1.5rem;
+  min-width: 1.5rem;
+}
+
+.contact-method span:last-child {
+  color: #34495e;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
 .contact-form {
   background: white;
   border-radius: 12px;

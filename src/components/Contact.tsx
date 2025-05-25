@@ -1,47 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
 
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  program: string;
-  message: string;
-}
-
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phone: '',
-    program: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      program: '',
-      message: ''
-    });
-    // Show success message (in a real app)
-    alert("Thank you for your message! I'll get back to you soon.");
-  };
-
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
@@ -81,82 +41,31 @@ const Contact: React.FC = () => {
                 <li>Weekday evenings</li>
                 <li>Weekend sessions</li>
                 <li>Online and in-person classes</li>
-                <li>Flexible scheduling</li>
               </ul>
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                placeholder="Enter your full name"
-              />
+          <div className="contact-form-container">
+            <div className="coming-soon-card">
+              <div className="coming-soon-icon">🚀</div>
+              <h3>Online Contact Form</h3>
+              <p className="coming-soon-title">Coming Soon!</p>
+              <p className="coming-soon-description">
+                We're working on an enhanced contact form to make it even easier for you to get in touch. 
+                In the meantime, please feel free to reach out directly using the contact information provided.
+              </p>
+              <div className="contact-methods">
+                <div className="contact-method">
+                  <span className="method-icon">📧</span>
+                  <span>Email for quick responses</span>
+                </div>
+                <div className="contact-method">
+                  <span className="method-icon">📱</span>
+                  <span>Call for immediate assistance</span>
+                </div>
+              </div>
             </div>
-
-            <div className="form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                placeholder="Enter your email address"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="phone">Phone Number</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                required
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="program">Program Interest</label>
-              <select
-                id="program"
-                name="program"
-                value={formData.program}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Select a program</option>
-                <option value="one-on-one">One-on-One French Coaching</option>
-                <option value="group">Small Group French Classes</option>
-                <option value="exam-prep">IB/IGCSE Exam Preparation</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                placeholder="Tell us about your French learning goals"
-                rows={4}
-              />
-            </div>
-
-            <button type="submit" className="submit-button">Send Message</button>
-          </form>
+          </div>
         </div>
       </div>
     </section>

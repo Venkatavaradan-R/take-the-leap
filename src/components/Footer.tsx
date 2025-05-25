@@ -4,6 +4,13 @@ import './Footer.css';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -16,11 +23,11 @@ const Footer: React.FC = () => {
           <div className="footer-section">
             <h3>Quick Links</h3>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#programs">Programs</a></li>
-              <li><a href="#testimonials">Testimonials</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><button onClick={() => scrollToSection('home')} className="footer-link-button">Home</button></li>
+              <li><button onClick={() => scrollToSection('about')} className="footer-link-button">About</button></li>
+              <li><button onClick={() => scrollToSection('programs')} className="footer-link-button">Programs</button></li>
+              <li><button onClick={() => scrollToSection('testimonials')} className="footer-link-button">Testimonials</button></li>
+              <li><button onClick={() => scrollToSection('contact')} className="footer-link-button">Contact</button></li>
             </ul>
           </div>
           

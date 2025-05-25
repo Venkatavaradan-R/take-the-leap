@@ -2,6 +2,13 @@ import React from 'react';
 import './Hero.css';
 
 const Hero: React.FC = () => {
+  const scrollToPrograms = () => {
+    const element = document.getElementById('programs');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="hero">
       <div className="hero-content">
@@ -21,7 +28,7 @@ const Hero: React.FC = () => {
             <span>Personalized Learning</span>
           </div>
         </div>
-        <button className="cta-button">Start Learning Today</button>
+        <button className="cta-button" onClick={scrollToPrograms}>Start Learning Today</button>
       </div>
     </section>
   );
