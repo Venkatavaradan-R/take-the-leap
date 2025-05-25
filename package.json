@@ -2,7 +2,7 @@
   "name": "tuition-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Venkatavaradan-R.github.io/take-the-leap",
+  "homepage": "https://leap-of-french.com",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
