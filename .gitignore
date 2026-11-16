@@ -28,3 +28,4 @@ yarn-error.log*
 
 # raw photos (may contain bystanders): only processed crops go in public/
 /photos
+*.tsbuildinfo
