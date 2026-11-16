@@ -1,25 +1,33 @@
-import React from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
+import Nav from './components/Nav';
 import Hero from './components/Hero';
+import Credentials from './components/Credentials';
 import About from './components/About';
-import Programs from './components/Programs';
+import Lessons from './components/Lessons';
+import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
+import Faq from './components/Faq';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppFab from './components/WhatsAppFab';
+import { useReveal } from './hooks/useReveal';
 
-function App() {
+export default function App() {
+  useReveal();
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Programs />
-      <Testimonials />
-      <Contact />
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Credentials />
+        <About />
+        <Lessons />
+        <HowItWorks />
+        <Testimonials />
+        <Faq />
+        <Contact />
+      </main>
       <Footer />
-    </div>
+      <WhatsAppFab />
+    </>
   );
 }
-
-export default App;
