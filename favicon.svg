@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#1d2550"/>
+  <path d="M14 44c8-20 26-26 38-20" fill="none" stroke="#9fb0ff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="50" cy="23" r="4.5" fill="#f2937a"/>
+  <text x="18" y="50" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#ffffff">L</text>
+</svg>
