@@ -9,8 +9,8 @@ export const contact = {
   whatsappNumber: '919945122664',
   whatsappMessage:
     "Bonjour Priya! I'm enquiring about one-on-one French tuition. Student's grade: __ · Board: IB / IGCSE / other: __",
-  location: 'Bengaluru, Karnataka',
-  availability: ['Weekday evenings', 'Weekends', 'Online or in person'],
+  location: 'Bengaluru · all lessons online',
+  availability: ['Weekday evenings', 'Weekends', 'Online lessons'],
 };
 
 export const whatsappLink = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(
@@ -112,7 +112,7 @@ export const steps = [
   },
   {
     title: 'A personal plan',
-    body: 'Regular one-on-one lessons, online or in person, with feedback and progress checks along the way.',
+    body: 'Regular one-on-one lessons online, with feedback and progress checks along the way.',
   },
 ];
 
@@ -154,7 +154,7 @@ export const testimonials = {
 export const faqs = [
   {
     q: 'Are lessons online or in person?',
-    a: 'Both. Lessons can be online or in person in Bengaluru, depending on what suits the student.',
+    a: 'All lessons are online, so students can join from home, wherever they are.',
   },
   {
     q: 'Which boards and levels do you teach?',

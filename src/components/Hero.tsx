@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="hero" id="top">
       <div className="container hero-grid">
         <div>
-          <span className="eyebrow reveal">One-on-one French tuition · Bengaluru & online</span>
+          <span className="eyebrow reveal">One-on-one French tuition · Online</span>
           <h1 className="reveal" style={{ ['--delay' as string]: '80ms' }}>
             Take the{' '}
             <em>
